@@ -36,7 +36,7 @@
         $input = $message_in;
 
         // This function grabs the word from Merriam Webster API in JSON format.
-        $word = json_decode(file_get_contents("https://www.dictionaryapi.com/api/v3/references/thesaurus/json/".$input."?key=46dfb682-cba6-40e3-905a-52288780a5fd"), TRUE);
+        $word = json_decode(file_get_contents("https://www.dictionaryapi.com/api/v3/references/thesaurus/json/".$input."?key=YOUR_KEY"), TRUE);
    
         $synonyms = "<strong>Synonyms | Thesaurus:</strong> \n\n". implode(", ", $word[0]['meta']['syns'][0]) ?  "<strong>Synonyms | Thesaurus:</strong> \n\n". implode(", ", $word[0]['meta']['syns'][0]) : "";
    
